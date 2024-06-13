@@ -1,14 +1,44 @@
-import Image from 'next/image'
-import React from 'react'
-import SearchCourse from './SearchCourse'
+"use client"
+
+import React, { useEffect, useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 import { Button } from './ui/button'
 import { IoPeopleCircleSharp } from 'react-icons/io5'
 
 const Navbar = () => {
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [isHeroSection, setIsHeroSection] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (typeof window !== 'undefined') {
+                const currentScrollY = window.scrollY;
+                if (currentScrollY > lastScrollY) {
+                    setIsVisible(false);
+                } else {
+                    setIsVisible(true);
+                }
+                setLastScrollY(currentScrollY);
+
+                if (currentScrollY > document.getElementById('hero')?.offsetHeight!) {
+                    setIsHeroSection(false);
+                } else {
+                    setIsHeroSection(true);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
+
     return (
-        <nav className='flex items-center fixed z-[99] top-0 left-0 w-full'>
-            <div className='wrapper flex items-center justify-between'>
+        <nav className={`flex items-center fixed z-[99] bg-transparent top-0 left-0 w-full ${isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'} ${isHeroSection ? 'bg-transparent' : '!bg-[#1b283f]'} transition-all duration-300`}>
+            <div className={`wrapper flex items-center justify-between ${!isHeroSection && '!py-3'} transition-all duration-300`}>
                 <span className='font-bold text-[28px] text-gray-50'><span className='text-[#00A2DF] text-[24px]'>Kana</span>Course</span>
 
                 <div className='flex items-center gap-6 w-full justify-end'>

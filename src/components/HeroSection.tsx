@@ -7,7 +7,7 @@ import { Button } from './ui/button'
 
 const HeroSection = () => {
     return (
-        <div className='flex flex-col w-full items-center pb-20'>
+        <div className='flex flex-col w-full items-center min-h-screen'>
             <div className='w-full relative h-[600px] flex items-center justify-center bg-[#1b283f]'>
                 <Image src="/images/grid-png.png" alt='' height={800} width={800} className='absolute h-full object-cover opacity-20' />
                 <Image src="/images/grid-png.png" alt='' height={800} width={800} className='absolute h-full object-cover opacity-20 right-0' />
@@ -15,7 +15,7 @@ const HeroSection = () => {
                 {/* <div className='w-full h-full absolute top-0 left-0 bg-[#1B1B1B]/60 z-10' /> */}
 
                 <div className='flex items-center flex-col z-20'>
-                    <h1 className='font-semibold text-[52px] text-gray-50'>Learn and Grow <span className='text-[#00A2DF]'>Every Day</span></h1>
+                    <h1 id='hero' className='font-semibold text-[52px] text-gray-50'>Learn and Grow <span className='text-[#00A2DF]'>Every Day</span></h1>
                     <p className='font-medium text-gray-200 text-[24px]'>Prepare for a future of limitless possibilities</p>
                 </div>
 

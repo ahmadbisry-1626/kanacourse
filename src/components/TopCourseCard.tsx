@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
+import { FaStar } from 'react-icons/fa6';
 import { LiaStarSolid } from 'react-icons/lia'
 
 type TcProps = {
@@ -22,7 +23,7 @@ const TopCourseCard = ({ tc }: { tc: TcProps }) => {
             <div className='relative w-full max-w-[250px] h-full bg-[#1b283f] rounded-tl-[12px] rounded-bl-[12px] overflow-hidden'>
                 <Image src={tc.imgUrl} alt='' width={300} height={300} className='absolute w-full h-full object-cover group-hover:translate-x-4 transition-all duration-500' />
 
-                <div className='w-full p-2 rounded-t-[24px] absolute bottom-0 bg-[#1b283f] flex items-center justify-center'>
+                <div className='w-full p-2 rounded-t-[24px] absolute bottom-0 bg-[#1b283f] flex items-center justify-center group-hover:translate-x-4 transition-all duration-500'>
                     <span className='text-gray-50 font-semibold'>{tc.name}</span>
                 </div>
             </div>
@@ -44,17 +45,17 @@ const TopCourseCard = ({ tc }: { tc: TcProps }) => {
                 <div className='flex flex-col gap-1'>
                     <div className='flex items-center gap-2'>
                         <div className='flex items-center gap-1'>
-                            <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-                            <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-                            <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-                            <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-                            <LiaStarSolid className='w-5 h-5 text-yellow-300' />
+                            <FaStar className='w-5 h-5 text-yellow-300' />
+                            <FaStar className='w-5 h-5 text-yellow-300' />
+                            <FaStar className='w-5 h-5 text-yellow-300' />
+                            <FaStar className='w-5 h-5 text-yellow-300' />
+                            <FaStar className='w-5 h-5 text-yellow-300' />
                         </div>
                         <span>({tc.rating})</span>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <span className='text-[20px] font-semibold'>Rp. {tc.price}</span>
-                        <span className='font-semibold line-through text-[16px] text-gray-500'>Rp. {tc.discount}</span>
+                        <span className='text-[20px] font-semibold'>Rp. {tc.price.toLocaleString()}</span>
+                        <span className='font-semibold line-through text-[16px] text-gray-500'>Rp. {tc.discount.toLocaleString()}</span>
                     </div>
                 </div>
             </div>

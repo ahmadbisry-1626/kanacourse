@@ -1,6 +1,7 @@
-import { Link } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
+import { FaStar } from 'react-icons/fa6';
 import { LiaStarSolid } from 'react-icons/lia'
 
 type TdProps = {
@@ -18,11 +19,11 @@ type TdProps = {
 
 const TopCourseDevCard = ({ td }: { td: TdProps }) => {
   return (
-    <a href={`/developer/${td.id}/${encodeURIComponent(td.title)}`} className='flex gap-3 bg-gray-50 rounded-[12px] w-[620px] h-[300px] mt-6 hover:shadow-md transition-all duration-300 group'>
+    <Link href={`/developer/${td.id}/${encodeURIComponent(td.title)}`} className='flex gap-3 bg-gray-50 rounded-[12px] w-[620px] h-[300px] mt-6 hover:shadow-md transition-all duration-300 group'>
       <div className='relative w-full max-w-[250px] h-full bg-[#1b283f] rounded-tl-[12px] rounded-bl-[12px] overflow-hidden'>
         <Image src={td.imgUrl} alt='' width={300} height={300} className='absolute w-full h-full object-cover group-hover:translate-x-4 transition-all duration-500' />
 
-        <div className='w-full p-2 rounded-t-[24px] absolute bottom-0 bg-[#1b283f] flex items-center justify-center'>
+        <div className='w-full p-2 rounded-t-[24px] absolute bottom-0 bg-[#1b283f] flex items-center justify-center group-hover:translate-x-4 transition-all duration-500'>
           <span className='text-gray-50 font-semibold'>{td.name}</span>
         </div>
       </div>
@@ -44,21 +45,21 @@ const TopCourseDevCard = ({ td }: { td: TdProps }) => {
         <div className='flex flex-col gap-1'>
           <div className='flex items-center gap-2'>
             <div className='flex items-center gap-1'>
-              <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-              <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-              <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-              <LiaStarSolid className='w-5 h-5 text-yellow-300' />
-              <LiaStarSolid className='w-5 h-5 text-yellow-300' />
+              <FaStar className='w-5 h-5 text-yellow-300' />
+              <FaStar className='w-5 h-5 text-yellow-300' />
+              <FaStar className='w-5 h-5 text-yellow-300' />
+              <FaStar className='w-5 h-5 text-yellow-300' />
+              <FaStar className='w-5 h-5 text-yellow-300' />
             </div>
             <span>({td.rating})</span>
           </div>
           <div className='flex items-center gap-2'>
-            <span className='text-[20px] font-semibold'>Rp. {td.price}</span>
-            <span className='font-semibold line-through text-[16px] text-gray-500'>Rp. {td.discount}</span>
+            <span className='text-[20px] font-semibold'>Rp. {td.price.toLocaleString()}</span>
+            <span className='font-semibold line-through text-[16px] text-gray-500'>Rp. {td.discount.toLocaleString()}</span>
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
 

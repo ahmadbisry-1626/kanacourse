@@ -1,9 +1,11 @@
 "use client"
 
-import { TopCourse, TopCourseDev } from '@/constants'
+import { TopCourse, TopCourseBus, TopCourseDev, TopCourseMar } from '@/constants'
 import React, { useState } from 'react'
 import TopCourseCard from './TopCourseCard'
 import TopCourseDevCard from './TopCourseDevCard'
+import TopCourseBusCard from './business/TopCourseBusCard'
+import TopCourseMarCard from './marketing/TopCourseMarCard'
 
 const TopCourses = () => {
     const [isActive, setIsActive] = useState<string>('Design')
@@ -16,31 +18,59 @@ const TopCourses = () => {
         <section className='wrapper flex items-center flex-col gap-4 relative'>
             <h2 className='font-semibold text-[32px]'>Browse Our Top Courses</h2>
             <div className='flex items-center gap-8 text-[20px]'>
-                <button className={`font-semibold text-gray-400 ${isActive === "Design" && '!text-slate-800'} transition-all duration-300`} onClick={() => handleClick("Design")}>Design</button>
-                <button className={`font-semibold text-gray-400 ${isActive === "Developer" && '!text-slate-800'} transition-all duration-300`} onClick={() => handleClick("Developer")}>Developer</button>
-                <button className={`font-semibold text-gray-400 ${isActive === "Business" && '!text-slate-800'} transition-all duration-300`} onClick={() => handleClick("Business")}>Business</button>
-                <button className={`font-semibold text-gray-400 ${isActive === "Marketing" && '!text-slate-800'} transition-all duration-300`} onClick={() => handleClick("Marketing")}>Marketing</button>
+                <button className={`font-semibold text-gray-400 ${isActive === "Design" && '!text-[#00A2DF]'} transition-all duration-300`} onClick={() => handleClick("Design")}>Design</button>
+                <button className={`font-semibold text-gray-400 ${isActive === "Developer" && '!text-[#00A2DF]'} transition-all duration-300`} onClick={() => handleClick("Developer")}>Developer</button>
+                <button className={`font-semibold text-gray-400 ${isActive === "Business" && '!text-[#00A2DF]'} transition-all duration-300`} onClick={() => handleClick("Business")}>Business</button>
+                <button className={`font-semibold text-gray-400 ${isActive === "Marketing" && '!text-[#00A2DF]'} transition-all duration-300`} onClick={() => handleClick("Marketing")}>Marketing</button>
             </div>
 
-            <div className={`flex flex-col items-center gap-10 ${isActive === 'Design' ? 'opacity-100 translate-x-0 z-20' : '-translate-x-4 opacity-0 z-10'} transition-all duration-300`}>
-                <ul className='w-full grid grid-cols-1  gap-5 lg:grid-cols-2 xl:gap-10'>
-                    {TopCourse.map((tc, i) => (
-                        <li key={i} className='flex justify-center'>
-                            <TopCourseCard tc={tc} />
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            {isActive === 'Design' && (
+                <div className={`flex flex-col items-center gap-10 transition-all duration-300`}>
+                    <ul className='w-full grid grid-cols-1  gap-5 lg:grid-cols-2 xl:gap-10'>
+                        {TopCourse.map((tc, i) => (
+                            <li key={i} className='flex justify-center'>
+                                <TopCourseCard tc={tc} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
 
-            <div className={`flex flex-col items-center gap-10 ${isActive === 'Developer' ? 'opacity-100 translate-x-0 z-20' : '-translate-x-4 opacity-0 z-10'} transition-all duration-300 absolute top-[130px]`}>
-                <ul className='w-full grid grid-cols-1  gap-5 lg:grid-cols-2 xl:gap-10'>
-                    {TopCourseDev.map((td) => (
-                        <li key={td.id} className='flex justify-center'>
-                            <TopCourseDevCard td={td}/>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            {isActive === 'Developer' && (
+                <div className={`flex flex-col items-center gap-10 transition-all duration-300`}>
+                    <ul className='w-full grid grid-cols-1 gap-5 lg:grid-cols-2 xl:gap-10'>
+                        {TopCourseDev.map((td) => (
+                            <li key={td.id} className='flex justify-center'>
+                                <TopCourseDevCard td={td} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            {isActive === 'Business' && (
+                <div className={`flex flex-col items-center gap-10 transition-all duration-300`}>
+                    <ul className='w-full grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-10'>
+                        {TopCourseBus.map((tb) => (
+                            <li className='flex justify-center' key={tb.id}>
+                                <TopCourseBusCard tb={tb} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            {isActive === 'Marketing' && (
+                <div className='flex fle-col items-center gap-10'>
+                    <ul className='w-full grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-10'>
+                        {TopCourseMar.map((tm) => (
+                            <li key={tm.id} className='flex justify-center'>
+                                <TopCourseMarCard tm={tm} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </section>
     )
 }
