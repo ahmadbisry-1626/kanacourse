@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={DMSans.variable}>
+    <html lang="en" className="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-slate-800 h-32 overflow-y-scroll">
+      <body className={`${DMSans.variable} `}>
         <Navbar />
         {children}
       </body>
