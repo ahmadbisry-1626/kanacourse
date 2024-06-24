@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import SimpleContact from "@/components/SimpleContact";
 import TopCourses from "@/components/TopCourses";
-import Image from "next/image";
+import TrendingCourses from "@/components/TrendingCourses";
 
 export default function Home() {
   return (
@@ -11,6 +11,8 @@ export default function Home() {
       <TopCourses />
 
       <SimpleContact />
+
+      <TrendingCourses />
 
       <div className="h-[999px]">
 
