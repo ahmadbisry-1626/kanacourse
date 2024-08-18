@@ -7,13 +7,9 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full flex flex-col">
       <HeroSection />
-
       <TopCourses />
-
       <SimpleContact />
-
       <TrendingCourses />
-
       <div className="h-[999px]">
 
       </div>

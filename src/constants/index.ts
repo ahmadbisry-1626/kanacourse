@@ -202,4 +202,38 @@ export const TopCourseMar = [
     },
 ]
 
-
+export const TrendingCourseItem = [
+    {
+        id: "1",
+        name: "Vera Jean",
+        title: "Masterclass in Design Thinking & Creativity",
+        imgUrl: "/images/trending-1.jpg",
+        tags: ["Design Thinking", "Creativity"],
+        desc: "Learn how to use Figma in this course for beginners",
+        price: 699000,
+        discount: 999000,
+        rating: 4.5,
+    },
+    {
+        id: "2",
+        name: "Casandra Lee",
+        title: "Business Strategy & Leadership Masterclass",
+        imgUrl: "/images/trending-2.jpg",
+        tags: ["Business", "Leadership"],
+        desc: 'Develop essential strategic thinking skills to drive your business to success',
+        price: 699000,
+        discount: 999000,
+        rating: 4.7,
+    },
+    {
+        id: "3",
+        name: "Julia Cindy",
+        title: "Digital Marketing & Social Media Mastery",
+        imgUrl: "/images/trending-3.jpg",
+        tags: ["Marketing", "Social Media"],
+        desc: 'Understand the basics of digital marketing and learn how to implement effective strategies',
+        price: 699000,
+        discount: 999000,
+        rating: 4.8,
+    },
+]
