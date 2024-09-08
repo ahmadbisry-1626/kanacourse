@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react'
 import { FaStar } from 'react-icons/fa6';
 
-interface TrendingCourseProps {
+export interface TrendingCourseProps {
     id: string;
     name: string;
     imgUrl: string;
@@ -15,9 +15,9 @@ interface TrendingCourseProps {
     rating: number;
 }
 
-const TrendingCourseCard = ({cardItem}: {cardItem: TrendingCourseProps}) => {
+const TrendingCourseCard = ({ cardItem }: { cardItem: TrendingCourseProps }) => {
     return (
-        <Link href="/" key={cardItem.id} className='flex gap-3 bg-gray-50 rounded-[12px] lg:w-[450px] max-lg:w-full xl:w-[620px] h-[300px] hover:shadow-md transition-all duration-300 group'>
+        <Link href={`/trending/${cardItem.id}/${encodeURIComponent(cardItem.title)}`} key={cardItem.id} className='flex gap-3 bg-gray-50 rounded-[12px] lg:w-[450px] max-lg:w-full xl:w-[620px] h-[300px] hover:shadow-md transition-all duration-300 group'>
             <div className='relative w-full max-w-[250px] h-full bg-[#1b283f] rounded-tl-[12px] rounded-bl-[12px] overflow-hidden'>
                 <Image src={cardItem.imgUrl} alt='' width={300} height={300} className='absolute w-full h-full object-cover group-hover:translate-x-4 transition-all duration-500' />
 

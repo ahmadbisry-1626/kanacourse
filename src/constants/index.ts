@@ -237,3 +237,62 @@ export const TrendingCourseItem = [
         rating: 4.8,
     },
 ]
+
+export const trendingCourseThumbnail = [
+    {
+        id: '09090189sdadas',
+        firstName: 'Angelina',
+        lastName: 'Lee',
+        title: 'Masterclass in Design Thinking, Innovation & Creativity',
+        imgUrl: '/images/MainCourse.jpg'
+    }
+]
+
+export const footerLinksSkill = [
+    {
+        name: 'Design',
+        link: '/',
+    },
+    {
+        name: 'Development',
+        link: '/',
+    },
+    {
+        name: 'Business',
+        link: '/',
+    },
+    {
+        name: 'Marketing',
+        link: '/',
+    },
+]
+
+export const footerLinksApp = [
+    {
+        name: 'VSCode',
+        link: '/',
+    },
+    {
+        name: 'Figma',
+        link: '/',
+    },
+    {
+        name: 'Adobe Photoshop',
+        link: '/',
+    },
+]
+
+export const footerLinksCompany = [
+    {
+        name: 'Programming',
+        link: '/',
+    },
+    {
+        name: 'Photography',
+        link: '/',
+    },
+    {
+        name: 'Video Making',
+        link: '/',
+    },
+]
