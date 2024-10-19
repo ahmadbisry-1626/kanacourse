@@ -33,7 +33,7 @@ const TrendingCourses = () => {
                 ))}
                 <div className='flex items-center w-full flex-col gap-6'>
                     {TrendingCourseItem.map((cardItem) => (
-                        <TrendingCourseCard cardItem={cardItem} />
+                        <TrendingCourseCard cardItem={cardItem} key={cardItem.id}/>
                     ))}
                 </div>
             </div>

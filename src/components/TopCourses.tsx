@@ -16,8 +16,8 @@ const TopCourses = () => {
 
     return (
         <section className='wrapper flex items-center flex-col gap-4 relative'>
-            <h2 className='font-semibold text-[32px]'>Browse Our Top Courses</h2>
-            <div className='flex items-center gap-8 text-[20px]'>
+            <h2 className='font-semibold md:text-[32px] text-[24px]'>Browse Our Top Courses</h2>
+            <div className='flex items-center md:gap-8 gap-6 text-[16px] md:text-[20px]'>
                 <button className={`font-semibold text-gray-400 ${isActive === "Design" && '!text-[#00A2DF]'} transition-all duration-300`} onClick={() => handleClick("Design")}>Design</button>
                 <button className={`font-semibold text-gray-400 ${isActive === "Developer" && '!text-[#00A2DF]'} transition-all duration-300`} onClick={() => handleClick("Developer")}>Developer</button>
                 <button className={`font-semibold text-gray-400 ${isActive === "Business" && '!text-[#00A2DF]'} transition-all duration-300`} onClick={() => handleClick("Business")}>Business</button>
@@ -26,7 +26,7 @@ const TopCourses = () => {
 
             {isActive === 'Design' && (
                 <div className={`flex flex-col items-center gap-10 transition-all duration-300`}>
-                    <ul className='w-full grid grid-cols-1  gap-5 lg:grid-cols-2 xl:gap-10'>
+                    <ul className='w-full grid grid-cols-1 gap-5 lg:grid-cols-2 xl:gap-10'>
                         {TopCourse.map((tc, i) => (
                             <li key={i} className='flex justify-center'>
                                 <TopCourseCard tc={tc} />
