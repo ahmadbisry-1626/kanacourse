@@ -19,11 +19,12 @@ type TmProps = {
 
 const TopCourseMarCard = ({ tm }: { tm: TmProps }) => {
     return (
-        <Link href={`/marketing/${tm.id}/${encodeURIComponent(tm.title)}`} className='flex gap-3 bg-gray-50 rounded-[12px] w-[620px] md:h-[300px] mt-6 hover:shadow-md transition-all duration-300 group'>
-            <div className='relative w-full md:max-w-[250px] max-w-[200px] h-full bg-[#1b283f] rounded-tl-[12px] rounded-bl-[12px] overflow-hidden'>
-                <Image src={tm.imgUrl} alt='' width={300} height={300} className='absolute w-full h-full object-cover group-hover:translate-x-4 transition-all duration-500' />
+        <Link href={`/marketing/${tm.id}/${encodeURIComponent(tm.title)}`} className='flex max-sm:flex-col gap-3 bg-gray-50 rounded-[12px] w-[620px] md:h-[350px] mt-6 hover:shadow-md transition-all duration-300 group'>
+            <div className='relative w-full md:max-w-[250px] h-full bg-[#1b283f] max-sm:rounded-t-[12px] md:rounded-tl-[12px] md:rounded-bl-[12px] overflow-hidden bg-transparent'>
+                <Image src={tm.imgUrl} alt='' width={600} height={600} className='md:absolute rounded-tl-[12px] rounded-bl-[12px] w-full h-full object-cover transition-all duration-500' />
+                <div className='bg-black w-full h-full z-10 absolute top-0 left-0 opacity-0 group-hover:opacity-20 transition-all duration-300'/>
 
-                <div className='w-full p-2 rounded-t-[24px] absolute bottom-0 bg-[#1b283f] flex items-center justify-center group-hover:translate-x-4 transition-all duration-500'>
+                <div className='w-full p-2 rounded-t-[16px] absolute bottom-0 bg-[#1b283f] flex items-center justify-center transition-all duration-500 z-20'>
                     <span className='text-gray-50 font-semibold max-md:text-[14px]'>{tm.name}</span>
                 </div>
             </div>
@@ -53,7 +54,7 @@ const TopCourseMarCard = ({ tm }: { tm: TmProps }) => {
                         </div>
                         <span className='max-md:text-sm'>({tm.rating})</span>
                     </div>
-                    <div className='flex max-md:flex-col-reverse md:items-center md:gap-2'>
+                    <div className='flex items-center gap-2 flex-wrap-reverse'>
                         <span className='text-[20px] font-semibold'>Rp. {tm.price.toLocaleString()}</span>
                         <span className='font-semibold line-through text-[16px] text-gray-500'>Rp. {tm.discount.toLocaleString()}</span>
                     </div>

@@ -7,7 +7,7 @@ import { Button } from './ui/button'
 
 const HeroSection = () => {
     return (
-        <div className='flex flex-col w-full items-center min-h-screen'>
+        <div className='flex flex-col w-full items-center md:min-h-screen'>
             <div className='w-full relative h-[600px] flex items-center justify-center bg-[#1b283f]'>
                 <Image src="/images/grid-png.png" alt='' height={800} width={800} className='absolute h-full object-cover opacity-20' />
                 <Image src="/images/grid-png.png" alt='' height={800} width={800} className='absolute h-full object-cover opacity-20 right-0' />
