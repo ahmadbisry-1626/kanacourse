@@ -1,3 +1,4 @@
+import ThumbnailVideo from '@/components/ThumbnailVideo'
 import { TopCourse } from '@/constants'
 import React from 'react'
 
@@ -17,9 +18,8 @@ const page = (props: CourseProps) => {
 
 
     return (
-        <div className='flex items-center justify-center w-full min-h-screen flex-col'>
-            <h1 className='text-[52px] font-semibold'>{course.name}</h1>
-            <h1 className='text-[52px] font-semibold'>{course.title}</h1>
+        <div className='flex w-full min-h-screen flex-col md:pt-24 pt-24 wrapper'>
+            <ThumbnailVideo course={course}/>
         </div>
     )
 }
