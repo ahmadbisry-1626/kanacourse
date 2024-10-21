@@ -9,9 +9,14 @@ export const TopCourse = [
         title: 'UI/UX Fundamentals: Your First Lesson',
         tags: ['UI Design', 'Figma'],
         description: 'Learn how to use Figma in this course for beginners',
+        fullDesc: [
+            "This course offers a comprehensive journey into the field of UI/UX design, equipping you with the knowledge and skills to create user-centered digital experiences. Whether you're new to design or seeking to enhance your existing skills, the course covers every step of the design process—from user research and ideation to wireframing, prototyping, and usability testing. You'll begin by understanding the principles of user experience design, exploring how to conduct user research to identify pain points and needs. From there, you'll learn how to turn ideas into tangible concepts through low-fidelity wireframes and iterate them into fully interactive prototypes. Along the way, the course delves into best practices for information architecture, visual hierarchy, and design systems to ensure consistency and usability across your projects.",
+            "The course emphasizes practical, hands-on learning, encouraging you to build designs for real-world applications and iterate based on user feedback. You'll also gain insight into tools and software commonly used in the industry, helping you become proficient in essential design workflows.By the end of the course, you will have a solid grasp of the UI/UX design process—from concept to completion—ready to apply your knowledge to web or mobile platforms. Whether you aspire to become a designer or simply enhance your creativity, this course provides the practical skills and frameworks you need to thrive in the modern design landscape."
+        ],
         price: 699000,
         discount: 999000,
         rating: 4.5,
+        webinar: 'How to become a professional UI/UX Designer in 2024'
     },
     {
         id: "2",
@@ -23,9 +28,14 @@ export const TopCourse = [
         title: "Ultimate Beginner's Guide to UI/UX Design",
         tags: ['UI Design', 'Adobe XD'],
         description: 'From fundamental concepts to practical tips, this video covers everything you need to know to get started',
+        fullDesc: [
+            "This course offers a comprehensive journey into the field of UI/UX design, equipping you with the knowledge and skills to create user-centered digital experiences. Whether you're new to design or seeking to enhance your existing skills, the course covers every step of the design process—from user research and ideation to wireframing, prototyping, and usability testing. You'll begin by understanding the principles of user experience design, exploring how to conduct user research to identify pain points and needs. From there, you'll learn how to turn ideas into tangible concepts through low-fidelity wireframes and iterate them into fully interactive prototypes. Along the way, the course delves into best practices for information architecture, visual hierarchy, and design systems to ensure consistency and usability across your projects.",
+            "The course emphasizes practical, hands-on learning, encouraging you to build designs for real-world applications and iterate based on user feedback. You'll also gain insight into tools and software commonly used in the industry, helping you become proficient in essential design workflows.By the end of the course, you will have a solid grasp of the UI/UX design process—from concept to completion—ready to apply your knowledge to web or mobile platforms. Whether you aspire to become a designer or simply enhance your creativity, this course provides the practical skills and frameworks you need to thrive in the modern design landscape."
+        ],
         price: 649000,
         discount: 75000,
         rating: 4.5,
+        webinar: 'How to become a professional UI/UX Designer in 2024'
     },
     {
         id: "3",
@@ -37,9 +47,14 @@ export const TopCourse = [
         title: 'Easy UI/UX Design for Absolute Beginners',
         tags: ['UI Design', 'UIX Design'],
         description: 'Enhance your skills and create impressive designs with our expert advice',
+        fullDesc: [
+            "This course offers a comprehensive journey into the field of UI/UX design, equipping you with the knowledge and skills to create user-centered digital experiences. Whether you're new to design or seeking to enhance your existing skills, the course covers every step of the design process—from user research and ideation to wireframing, prototyping, and usability testing. You'll begin by understanding the principles of user experience design, exploring how to conduct user research to identify pain points and needs. From there, you'll learn how to turn ideas into tangible concepts through low-fidelity wireframes and iterate them into fully interactive prototypes. Along the way, the course delves into best practices for information architecture, visual hierarchy, and design systems to ensure consistency and usability across your projects.",
+            "The course emphasizes practical, hands-on learning, encouraging you to build designs for real-world applications and iterate based on user feedback. You'll also gain insight into tools and software commonly used in the industry, helping you become proficient in essential design workflows.By the end of the course, you will have a solid grasp of the UI/UX design process—from concept to completion—ready to apply your knowledge to web or mobile platforms. Whether you aspire to become a designer or simply enhance your creativity, this course provides the practical skills and frameworks you need to thrive in the modern design landscape."
+        ],
         price: 699000,
         discount: 999000,
         rating: 4.5,
+        webinar: 'How to become a professional UI/UX Designer in 2024'
     },
     {
         id: "4",
@@ -51,9 +66,14 @@ export const TopCourse = [
         title: 'Jumpstart Your UI/UX Design Journey',
         tags: ['Figma', 'Clean Design'],
         description: 'Learn the basics, gain confidence, and begin creating effective and engaging user interfaces',
+        fullDesc: [
+            "This course offers a comprehensive journey into the field of UI/UX design, equipping you with the knowledge and skills to create user-centered digital experiences. Whether you're new to design or seeking to enhance your existing skills, the course covers every step of the design process—from user research and ideation to wireframing, prototyping, and usability testing. You'll begin by understanding the principles of user experience design, exploring how to conduct user research to identify pain points and needs. From there, you'll learn how to turn ideas into tangible concepts through low-fidelity wireframes and iterate them into fully interactive prototypes. Along the way, the course delves into best practices for information architecture, visual hierarchy, and design systems to ensure consistency and usability across your projects.",
+            "The course emphasizes practical, hands-on learning, encouraging you to build designs for real-world applications and iterate based on user feedback. You'll also gain insight into tools and software commonly used in the industry, helping you become proficient in essential design workflows.By the end of the course, you will have a solid grasp of the UI/UX design process—from concept to completion—ready to apply your knowledge to web or mobile platforms. Whether you aspire to become a designer or simply enhance your creativity, this course provides the practical skills and frameworks you need to thrive in the modern design landscape."
+        ],
         price: 479000,
         discount: 799000,
         rating: 4.5,
+        webinar: 'How to become a professional UI/UX Designer in 2024'
     },
 ]
 

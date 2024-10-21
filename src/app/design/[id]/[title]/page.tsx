@@ -1,3 +1,5 @@
+import Description from '@/components/Description'
+import SubscribeCard from '@/components/SubscribeCard'
 import ThumbnailVideo from '@/components/ThumbnailVideo'
 import { TopCourse } from '@/constants'
 import React from 'react'
@@ -18,8 +20,10 @@ const page = (props: CourseProps) => {
 
 
     return (
-        <div className='flex w-full min-h-screen flex-col md:pt-24 pt-24 wrapper'>
-            <ThumbnailVideo course={course}/>
+        <div className='flex w-full min-h-screen flex-col md:pt-24 pt-24 wrapper gap-8'>
+            <ThumbnailVideo course={course} />
+            <Description course={course} />
+            <SubscribeCard />
         </div>
     )
 }

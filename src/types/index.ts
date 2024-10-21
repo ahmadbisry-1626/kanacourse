@@ -8,7 +8,9 @@ export type CourseProps = {
     title: string;
     tags: string[];
     description: string;
+    fullDesc: string[];
     price: number;
     discount: number;
     rating: number;
+    webinar: string;
 }

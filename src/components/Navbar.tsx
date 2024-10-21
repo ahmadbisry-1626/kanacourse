@@ -49,10 +49,10 @@ const Navbar = () => {
     }
 
     return (
-        <nav className={`flex items-center fixed z-[99] bg-transparent top-0 left-0 w-full ${isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'} ${isHeroSection ? 'bg-transparent' : '!bg-[#1b283f]'} transition-all duration-300`}>
+        <nav className={`flex items-center fixed z-[99] top-0 left-0 w-full ${isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'} ${isHeroSection ? 'bg-transparent' : '!bg-[#1b283f]'} transition-all duration-300`}>
             <div className={`wrapper flex items-center justify-between ${!isHeroSection && '!py-3'} transition-all duration-300`}>
                 <Link href="/" className={`flex items-center font-bold text-[20px] md:text-[24px] text-gray-50 ${isDetails && isHeroSection && 'text-gray-800'} tracking-tight`}>
-                    <Image src='/images/logo-owl.png' alt='logo' width={50} height={50} sizes='100vw' className='mr-3'/>
+                    <Image src='/images/logo-owl.png' alt='logo' width={50} height={50} sizes='100vw' className='mr-3 md:w-[50px] md:h-[50px] w-[35px] h-[35px]'/>
                     Kana
                     <span className={`text-blue-600`}>Course</span>
                 </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
                     {/* <SearchCourse /> */}
                     <span className={`text-[18px] text-gray-50 ${isDetails && isHeroSection && '!text-black'} font-medium`}>Become instructor</span>
                     <FaShoppingCart className='w-6 h-6 text-blue-600' />
-                    <Button className={`border-2 text-gray-50 border-gray-50 font-medium rounded-[12px] hover:text-slate-800 hover:bg-gray-50 ${!isDetails && 'bg-transparent'}`}>Login</Button>
+                    <Button className={`border-2 text-gray-50 bg-transparent border-gray-50 font-medium rounded-[12px] hover:text-slate-800 hover:bg-gray-50 ${isDetails && isHeroSection && 'bg-blue-600'}`}>Login</Button>
                     <Button className={`rounded-[12px] flex items-center gap-3 bg-gray-50 font-medium text-black hover:bg-gray-50 ${isDetails && isHeroSection && 'bg-gray-100'}`}>
                         <IoPeopleCircleSharp className='w-5 h-5 text-black' />
                         Register
