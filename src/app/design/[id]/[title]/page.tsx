@@ -21,7 +21,7 @@ const page = (props: CourseProps) => {
 
 
     return (
-        <div className='flex w-full min-h-screen flex-col md:pt-24 pt-24 wrapper md:gap-8 gap-6'>
+        <div className='flex w-full min-h-screen flex-col md:pt-24 pt-24 wrapper md:gap-8 gap-6 relative'>
             <ThumbnailVideo course={course} />
             <Description course={course} />
             <SubscribeCard />

@@ -61,7 +61,7 @@ export const TopCourse = [
         thumbUrl: '/images/thumb-card-3.jpg',
         thumbUrlMobile: '/images/thumb-card-3.jpg',
         title: 'Easy UI/UX Design for Absolute Beginners',
-        tags: ['UI Design', 'UIX Design'],
+        tags: ['UI Design', 'UX Design'],
         description: 'Enhance your skills and create impressive designs with our expert advice',
         fullDesc: [
             "This course is tailored for those with no prior experience in design, making UI/UX concepts easy to understand and apply. You'll start by learning the fundamental principles of design thinking and how to create interfaces that are both visually appealing and easy to use.",
@@ -452,7 +452,7 @@ export const TrendingCourseItem = [
         imgUrl: "/images/trending-1.jpg",
         thumbUrl: "/images/thumb-trending-course-1.jpg",
         thumbUrlMobile: "/images/thumb-trending-course-1.jpg",
-        tags: ["Design Thinking", "Creativity"],
+        tags: ["UI/UX", "Clean Design"],
         description: "Learn how to use Figma in this course for beginners",
         fullDesc: [
             "This course introduces you to the fundamentals of design thinking and creative problem-solving. You'll explore tools like Figma to bring your ideas to life, collaborate effectively with teams, and iterate on designs based on user feedback.",
