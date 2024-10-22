@@ -30,7 +30,7 @@ const ThumbnailVideo = ({ course }: { course: CourseProps }) => {
                     <Image src={course.thumbUrlMobile} alt={course.title} width={1000} height={1000} className='absolute w-full h-full top-0 object-cover object-top md:hidden block' loading='lazy' sizes='100vw' />
 
                     <div className='w-full h-full absolute top-0 flex items-center justify-center group-hover:bg-black/30 transition-all duration-500'>
-                        <FaPlay className='md:size-32 size-20 text-blue-600 cursor-pointer hover:scale-95 transition-all duration-300' />
+                        <FaPlay className='md:size-32 size-16 text-blue-600 cursor-pointer hover:scale-95 transition-all duration-300' />
                     </div>
                 </div>
                 <div className='flex flex-col gap-2 w-full lg:max-w-[350px]'>

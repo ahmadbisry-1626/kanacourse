@@ -9,7 +9,7 @@ export interface TrendingCourseProps {
     imgUrl: string;
     title: string;
     tags: string[];
-    desc: string;
+    description: string;
     price: number;
     discount: number;
     rating: number;
@@ -39,7 +39,7 @@ const TrendingCourseCard = ({ cardItem }: { cardItem: TrendingCourseProps }) => 
                             {cardItem.tags[1]}
                         </span>
                     </div>
-                    <p className='text-[14px] text-gray-500'>{cardItem.desc}</p>
+                    <p className='text-[14px] text-gray-500'>{cardItem.description}</p>
                 </div>
 
                 <div className='flex flex-col gap-1'>
