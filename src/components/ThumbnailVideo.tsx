@@ -25,7 +25,7 @@ const ThumbnailVideo = ({ course }: { course: CourseProps }) => {
             </div>
 
             <div className='flex max-lg:flex-col items-start lg:gap-8 gap-4'>
-                <div className='w-full md:h-[500px] h-[300px] max-sm:h-[200px] rounded-[12px] relative overflow-hidden group'>
+                <div className='w-full md:h-[500px] h-[300px] max-sm:h-[220px] rounded-[12px] relative overflow-hidden group'>
                     <Image src={course.thumbUrl} alt={course.title} width={1000} height={1000} className='absolute w-full h-full top-0 object-cover object-top md:block hidden group-hover:scale-105 transition-all duration-500' loading='lazy' sizes='100vw' />
                     <Image src={course.thumbUrlMobile} alt={course.title} width={1000} height={1000} className='absolute w-full h-full top-0 object-cover object-top md:hidden block' loading='lazy' sizes='100vw' />
 

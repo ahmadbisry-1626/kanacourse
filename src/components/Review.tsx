@@ -10,12 +10,12 @@ const Review = () => {
 
     return (
         <>
-            <div className='flex flex-col gap-3'>
-                <h1 className='md:text-[20px] text-[18px] font-semibold'>
+            <div className='flex items-center flex-col gap-3'>
+                <h1 className='md:text-[20px] text-[18px] font-semibold w-full'>
                     What people say about this course
                 </h1>
                 <div className='flex flex-col items-center gap-4 relative'>
-                    <div className='w-full h-full absolute top-0 bg-gradient-to-t from-gray-100/50' />
+                    <div className='w-full h-full absolute top-0 bg-gradient-to-t from-gray-100/40' />
 
                     <div className='flex items-start gap-4'>
                         <Image src="/images/ava-1.jpeg" alt='avatara-user' width={50} height={50} className='flex-shrink-0 rounded-full' sizes='100vw' />
@@ -57,11 +57,11 @@ const Review = () => {
                             </p>
                         </div>
                     </div>
-
-                    <Button className='z-10 mt-3 rounded-[12px]' size="lg" onClick={() => setIsModalOpen(true)}>
-                        Login to see more reviews
-                    </Button>
                 </div>
+
+                <Button className='z-10 mt-3 rounded-[12px] w-max' size="lg" onClick={() => setIsModalOpen(true)}>
+                    Login to see more reviews
+                </Button>
             </div>
 
             {/* LOGIN MODAL */}
