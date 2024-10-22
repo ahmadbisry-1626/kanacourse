@@ -14,18 +14,18 @@ const ThumbnailVideo = ({ course }: { course: CourseProps }) => {
         <section className='flex flex-col w-full gap-4'>
             <div className='flex flex-col' id='hero'>
                 <h1 className='md:text-[32px] text-[24px] font-semibold'>{course.title}</h1>
-                <div className='flex items-center md:gap-4 gap-2'>
+                <div className='flex items-center gap-2'>
                     <span className='text-pink-600 md:text-[18px] text-[16px] font-medium'>{course.name}</span>
                     <div className='flex items-center gap-2'>
                         <FaStar className='md:w-5 md:h-5 w-3 h-3 text-yellow-300' />
                         <span className='md:text-[16px] text-sm'>{course.rating}</span>
-                        <p className='md:text-[16px] text-sm text-gray-400'>(1,290 ratings)</p>
+                        <p className='md:text-[16px] text-sm text-gray-400'>({course.totalRating.toLocaleString()} ratings)</p>
                     </div>
                 </div>
             </div>
 
             <div className='flex max-lg:flex-col items-start lg:gap-8 gap-4'>
-                <div className='w-full md:h-[500px] h-[350px] max-sm:h-[250px] rounded-[12px] relative overflow-hidden group'>
+                <div className='w-full md:h-[500px] h-[300px] max-sm:h-[200px] rounded-[12px] relative overflow-hidden group'>
                     <Image src={course.thumbUrl} alt={course.title} width={1000} height={1000} className='absolute w-full h-full top-0 object-cover object-top md:block hidden group-hover:scale-105 transition-all duration-500' loading='lazy' sizes='100vw' />
                     <Image src={course.thumbUrlMobile} alt={course.title} width={1000} height={1000} className='absolute w-full h-full top-0 object-cover object-top md:hidden block' loading='lazy' sizes='100vw' />
 
@@ -44,7 +44,7 @@ const ThumbnailVideo = ({ course }: { course: CourseProps }) => {
                             </span>
                         </div>
                         <div className='bg-pink-600 px-3 py-1 rounded-[4px] w-max flex-shrink-0'>
-                            <span className='text-gray-50 font-medium text-sm'>40% OFF</span>
+                            <span className='text-gray-50 font-medium text-sm'>{course.discPercent} OFF</span>
                         </div>
                     </div>
                     <div className='lg:mt-3 mt-2 w-full flex flex-col gap-3'>
@@ -58,27 +58,27 @@ const ThumbnailVideo = ({ course }: { course: CourseProps }) => {
                         <div className='grid sm:grid-cols-2 lg:grid-cols-1 gap-5'>
                             <div className='flex items-center gap-4'>
                                 <IoBookmarksOutline className='md:w-6 md:h-6 w-5 h-5 text-gray-500' />
-                                <span className='md:text-[18px] text-[16px] text-gray-500'>22 Sections</span>
+                                <span className='md:text-[18px] text-[16px] text-gray-500'>{course.section} Sections</span>
                             </div>
                             <div className='flex items-center gap-4'>
                                 <BsBook className='md:w-6 md:h-6 w-5 h-5 text-gray-500' />
-                                <span className='md:text-[18px] text-[16px] text-gray-500'>152 Lectures</span>
+                                <span className='md:text-[18px] text-[16px] text-gray-500'>{course.lecture} Lectures</span>
                             </div>
                             <div className='flex items-center gap-4'>
                                 <MdOutlineLiveTv className='md:w-6 md:h-6 w-5 h-5 text-gray-500' />
-                                <span className='md:text-[18px] text-[16px] text-gray-500'>21 hours 33 minutes</span>
+                                <span className='md:text-[18px] text-[16px] text-gray-500'>{course.duration}</span>
                             </div>
                             <div className='flex items-center gap-4'>
                                 <HiOutlineSpeakerWave className='md:w-6 md:h-6 w-5 h-5 text-gray-500' />
-                                <span className='md:text-[18px] text-[16px] text-gray-500'>English</span>
+                                <span className='md:text-[18px] text-[16px] text-gray-500'>{course.language}</span>
                             </div>
                             <div className='flex items-center gap-4'>
                                 <HiMiniDevicePhoneMobile className='md:w-6 md:h-6 w-5 h-5 text-gray-500' />
-                                <span className='md:text-[18px] text-[16px] text-gray-500'>Access on mobile and TV</span>
+                                <span className='md:text-[18px] text-[16px] text-gray-500'>{course.access}</span>
                             </div>
                             <div className='flex items-center gap-4'>
                                 <AiOutlineSafetyCertificate className='md:w-6 md:h-6 w-5 h-5 text-gray-500' />
-                                <span className='md:text-[18px] text-[16px] text-gray-500'>Certificate of completion</span>
+                                <span className='md:text-[18px] text-[16px] text-gray-500'>{course.certificate}</span>
                             </div>
                         </div>
                     </div>

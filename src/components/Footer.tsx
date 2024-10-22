@@ -40,7 +40,7 @@ const Footer = () => {
 
                 <Separator className='bg-[#F9F9F9]/10 h-[0.1px] mt-10' />
 
-                <div className='flex items-center justify-between text-gray-400 mt-5 text-sm md:text-[16px]'>
+                <div className='flex max-sm:flex-col-reverse max-sm:gap-3 items-center justify-between text-gray-400 mt-5 text-sm md:text-[16px]'>
                     <h2>© 2024 Kanabagi. All Rights Reserved.</h2>
 
                     <div className='flex items-center gap-4'>

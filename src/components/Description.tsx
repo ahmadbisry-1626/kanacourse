@@ -26,8 +26,8 @@ const Description = ({ course }: { course: CourseProps }) => {
                     <span className='text-sm text-gray-50'>WEBINAR</span>
                 </div>
                 <span className='md:text-[18px] text-[16px] text-gray-200'>{course.name}</span>
-                <h1 className='md:text-[24px] text-[20px] font-semibold text-gray-50 leading-snug'>
-                    How to become a professional UI/UX Designer in 2024
+                <h1 className='md:text-[24px] text-[20px] font-semibold text-gray-50 leading-snug w-full lg:max-w-[300px]'>
+                    {course.webinar}
                 </h1>
                 <Button className='bg-transparent border-2 border-gray-50 md:w-max hover:bg-gray-50 hover:text-gray-800 md:mt-6 mt-3' size="lg">Learn more</Button>
             </div>

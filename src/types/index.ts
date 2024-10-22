@@ -11,6 +11,14 @@ export type CourseProps = {
     fullDesc: string[];
     price: number;
     discount: number;
+    discPercent: string
     rating: number;
+    totalRating: number
     webinar: string;
+    section: string
+    lecture: string
+    duration: string
+    language: string
+    access: string
+    certificate: string
 }

@@ -19,7 +19,7 @@ type TbProps = {
 
 const TopCourseBusCard = ({ tb }: { tb: TbProps }) => {
     return (
-        <Link href={`/business/${tb.id}/${encodeURIComponent(tb.title)}`} className='flex max-sm:flex-col gap-3 bg-gray-50 rounded-[12px] w-[620px] md:h-[350px] mt-6 hover:shadow-md transition-all duration-300 group'>
+        <Link href={`/business/${tb.id}/${encodeURIComponent(tb.title)}`} className='flex max-sm:flex-col gap-3 bg-gray-50 rounded-[12px] w-[620px] md:h-[350px] mt-6 hover:shadow-md transition-all duration-300 group overflow-hidden'>
             <div className='relative w-full md:max-w-[250px] h-full bg-[#1b283f] max-sm:rounded-t-[12px] md:rounded-tl-[12px] md:rounded-bl-[12px] overflow-hidden bg-transparent'>
                 <Image src={tb.imgUrl} alt='' width={600} height={600} className='md:absolute rounded-tl-[12px] rounded-bl-[12px] w-full h-full object-cover transition-all duration-500' loading='lazy' />
                 <div className='bg-black w-full h-full z-10 absolute top-0 left-0 opacity-0 group-hover:opacity-20 transition-all duration-300'/>
