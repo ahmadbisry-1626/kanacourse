@@ -53,7 +53,7 @@ const TopicCourse = () => {
                     variant="outline"
                     role="combobox"
                     aria-expanded={open}
-                    className="w-[200px] justify-between"
+                    className="md:w-[200px] w-full justify-between"
                 >
                     {value
                         ? frameworks.find((framework) => framework.value === value)?.label

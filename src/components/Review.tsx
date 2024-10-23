@@ -15,7 +15,7 @@ const Review = () => {
                     What people say about this course
                 </h1>
                 <div className='flex flex-col items-center gap-4 relative'>
-                    <div className='w-full h-full absolute top-0 bg-gradient-to-t from-gray-50/80' />
+                    <div className='w-full h-full absolute top-0 bg-gradient-to-t from-gray-50/50' />
 
                     <div className='flex items-start gap-4'>
                         <Image src="/images/ava-1.jpeg" alt='avatara-user' width={50} height={50} className='flex-shrink-0 rounded-full' sizes='100vw' />

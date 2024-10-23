@@ -24,10 +24,12 @@ const HeroSection = () => {
                 <div className='w-full max-w-6xl absolute -bottom-10 bg-gray-50 rounded-[24px] z-20 p-6 px-8 overflow-hidden'>
                     <div className='flex flex-col gap-3'>
                         <span className='font-semibold text-[18px]'>What do you want to learn?</span>
-                        <div className='flex items-center gap-3 z-10'>
+                        <div className='flex max-md:flex-col items-center gap-3 z-10'>
                             <Input className='focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0' placeholder='Find courses, skills, etc' />
-                            <CategoryCourse />
-                            <TopicCourse />
+                            <div className='flex items-center gap-3 max-md:w-full'>
+                                <CategoryCourse />
+                                <TopicCourse />
+                            </div>
                             <Button className='bg-blue-600 md:block hidden'>
                                 Search
                             </Button>

@@ -16,8 +16,8 @@ const TopCourses = () => {
 
     return (
         <section className='wrapper flex items-center flex-col gap-4 relative mt-16'>
-            <h2 className='font-semibold md:text-[32px] text-[24px]'>Browse Our Top Courses</h2>
-            <div className='flex items-center justify-center md:gap-8 gap-4 text-[16px] md:text-[20px] flex-wrap'>
+            <h2 className='font-semibold md:text-[32px] text-[24px] max-md:text-center'>Browse Our Top Courses</h2>
+            <div className='flex items-center justify-center md:gap-8 gap-5 text-[16px] md:text-[20px] flex-wrap'>
                 <button className={`font-semibold text-gray-400 ${isActive === "Design" && '!text-blue-600'} transition-all duration-300`} onClick={() => handleClick("Design")}>Design</button>
                 <button className={`font-semibold text-gray-400 ${isActive === "Developer" && '!text-blue-600'} transition-all duration-300`} onClick={() => handleClick("Developer")}>Developer</button>
                 <button className={`font-semibold text-gray-400 ${isActive === "Business" && '!text-blue-600'} transition-all duration-300`} onClick={() => handleClick("Business")}>Business</button>
